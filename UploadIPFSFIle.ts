@@ -26,8 +26,8 @@ export const saveIPFSFile = async (localfile: any) => {
     progress: (prog: any) => console.log(`Saved :${prog}`),
   };
   console.log("Before IPFS");
-//   let result = await ipfs.add(data, options);
-  let result = await ipfs.add("Hello");
+  let result = await ipfs.add(data, options);
+  // let result = await ipfs.add("Hello");
   console.log("After IPFS",result);
   return result;
 };
@@ -42,4 +42,4 @@ async function saveText() {
 }
 // saveText();
 
-saveIPFSFile("3.png");
+// saveIPFSFile("3.png");

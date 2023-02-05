@@ -23,7 +23,7 @@ async function saveText() {
   //   let result = await ipfs.add("Hello");
   console.log(result);
 }
-saveText();
+// saveText();
 
 async function saveFile() {
   let ipfs = await ipfsClient();
@@ -36,7 +36,7 @@ async function saveFile() {
   let result = await ipfs.add(data, options);
   console.log(result);
 }
-// saveFile()
+saveFile()
 
 async function getData(hash) {
   let ipfs = await ipfsClient();
