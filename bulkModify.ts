@@ -71,4 +71,4 @@ async function runScriptOnce(from: any, to: any, fromROW: any, toROW: any) {
 
 
 // runScriptOnce(fromcolumn,toColumn,fromRow,toROW)
-runScriptOnce(9, 30, 1, 5);
+runScriptOnce(10, 30, 2, 5);

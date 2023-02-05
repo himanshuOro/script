@@ -21,6 +21,8 @@ async function ipfsClient() {
 export const saveIPFSFile = async (localfile: any) => {
   let ipfs = await ipfsClient();
   let data = fs.readFileSync(path.join(__dirname, "images", localfile));
+  console.log(localfile)
+  console.log("hhh==>",data)
   let options = {
     warpWithDirectory: false,
     progress: (prog: any) => console.log(`Saved :${prog}`),
