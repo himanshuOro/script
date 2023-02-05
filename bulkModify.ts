@@ -29,12 +29,12 @@ function isValidURL(string: any) {
 //   value: any
 // ) => {};
 
-async function runScriptOnce(from: any, to: any, iteration: any) {
+async function runScriptOnce(from: any, to: any, fromROW: any, toROW: any) {
   await workbook.xlsx.readFile(newExcelFile);
   //  .then(function () {
   var worksheet = workbook.getWorksheet(1);
 
-  for (let i = 300; i < 400; i++) {
+  for (let i = fromROW; i <= toROW; i++) {
     try {
       // STEP 1 (STARTED): Read CELL AND VALIDATING IF THAT IS A VALID URL
 
@@ -67,4 +67,8 @@ async function runScriptOnce(from: any, to: any, iteration: any) {
 
   // STEP 2 : if read successfully getIPFS URL
 }
-runScriptOnce(9, 17, 2);
+
+
+
+// runScriptOnce(fromcolumn,toColumn,fromRow,toROW)
+runScriptOnce(11, 27, 1, 5);
